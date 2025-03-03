@@ -4,13 +4,13 @@ from tkinter import *
 from tkinter import messagebox
 
 root = Tk()
-root.geometry("300x200")
+root.geometry("300x250")
 root.title("Timer Count Down")
 
 # variables 
-hora = StringVar
-minuto = StringVar
-segundo = StringVar
+hora = StringVar()
+minuto = StringVar()
+segundo = StringVar()
 
 #Set 
 hora.set("00")
@@ -34,6 +34,26 @@ def sumbit():
         mins, secs =  divmod(temp,60)  # divmod(firstvalue = temp//60, secondvalue = temp%60)
         # Converting the input entered in mins or secs to hours,
         # mins ,secs(input = 110 min --> 120*60 = 6600 => 1hr : 50min: 0sec)
+        horas = 0
+        if mins > 60:
+            horas, mins = divmod(mins, 60)
+        # store the value up to two decimal places
+        hora.set("{0:2d}".format(hours))
+        minuto.set("{0:2d}".format(mins))
+        segundo.set("{0:2d}".format(secs))
 
+        # Update the GUI window after decrementing the temp value every time
+        root.update()
+        time.sleep(1)
+
+        #When temp  value = 0, then messagebox pop's up
+        if (temp == 0):
+            messagebox.showinfo("Time CountDown", "Time's up")
+        # after every one sec the value of temp wil be decremented by one
+        temp -=1
+
+# Button 
+btn_start = Button(root, text="Set Time Countdown", bd='5', command=submit)
+btn.place(x=70, y=120)
 
 root.mainloop()
