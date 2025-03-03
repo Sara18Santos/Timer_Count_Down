@@ -18,11 +18,11 @@ minuto.set("00")
 segundo.set("00")
 
 #Entry class
-horaEntry = Entry(root, width=3, font=("Arial", 18, ""), textvariable=hora)
+horaEntry = Entry(root, width=4, font=("Arial", 18, ""), textvariable=hora)
 horaEntry.place(x=80, y=20)
-minutoEntry = Entry(root, width=3, font=("Arial", 18, ""), textvariable=minuto)
-minutoEntry.place(x=1300, y=20)
-segudoEntry = Entry(root, width=3, font=("Arial", 18, ""), textvariable=segundo)
+minutoEntry = Entry(root, width=4, font=("Arial", 18, ""), textvariable=minuto)
+minutoEntry.place(x=130, y=20)
+segudoEntry = Entry(root, width=4, font=("Arial", 18, ""), textvariable=segundo)
 segudoEntry.place(x=180, y=20)
 
 def submit():
@@ -34,9 +34,9 @@ def submit():
         mins, secs =  divmod(temp,60)  # divmod(firstvalue = temp//60, secondvalue = temp%60)
         # Converting the input entered in mins or secs to hours,
         # mins ,secs(input = 110 min --> 120*60 = 6600 => 1hr : 50min: 0sec)
-        horas = 0
+        hours = 0
         if mins > 60:
-            horas, mins = divmod(mins, 60)
+            hours, mins = divmod(mins, 60)
         # store the value up to two decimal places
         hora.set("{0:2d}".format(hours))
         minuto.set("{0:2d}".format(mins))
