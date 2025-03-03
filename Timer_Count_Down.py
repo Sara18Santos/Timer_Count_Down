@@ -4,7 +4,7 @@ from tkinter import *
 from tkinter import messagebox
 
 root = Tk()
-root.geometry("300x230")
+root.geometry("300x220")
 root.title("Timer Count Down")
 
 # variables 
@@ -18,12 +18,12 @@ minuto.set("00")
 segundo.set("00")
 
 #Entry class
-horaEntry = Entry(root, width=4, font=("Arial", 18, ""), textvariable=hora)
-horaEntry.place(x=80, y=20)
-minutoEntry = Entry(root, width=4, font=("Arial", 18, ""), textvariable=minuto)
-minutoEntry.place(x=130, y=20)
-segundoEntry = Entry(root, width=4, font=("Arial", 18, ""), textvariable=segundo)
-segundoEntry.place(x=180, y=20)
+horaEntry = Entry(root, width=4, font=("Arial", 20, ""), textvariable=hora)
+horaEntry.place(x=80, y=35)
+minutoEntry = Entry(root, width=4, font=("Arial", 20, ""), textvariable=minuto)
+minutoEntry.place(x=130, y=35)
+segundoEntry = Entry(root, width=4, font=("Arial", 20, ""), textvariable=segundo)
+segundoEntry.place(x=180, y=35)
 
 def submit():
     try: 
