@@ -22,7 +22,7 @@ horaEntry = Entry(root, width=4, font=("Arial", 18, ""), textvariable=hora)
 horaEntry.place(x=80, y=20)
 minutoEntry = Entry(root, width=4, font=("Arial", 18, ""), textvariable=minuto)
 minutoEntry.place(x=130, y=20)
-segudoEntry = Entry(root, width=4, font=("Arial", 18, ""), textvariable=segundo)
+segundoEntry = Entry(root, width=4, font=("Arial", 18, ""), textvariable=segundo)
 segudoEntry.place(x=180, y=20)
 
 def submit():
