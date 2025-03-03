@@ -36,4 +36,4 @@ def sumbit():
         # mins ,secs(input = 110 min --> 120*60 = 6600 => 1hr : 50min: 0sec)
 
 
-root,mainloop()
+root.mainloop()
